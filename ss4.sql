@@ -66,4 +66,21 @@ SELECT product_id, product_name, price, stock, category_id
 FROM Products
 WHERE stock > 15;
         
+-- Lấy ra danh sách các sản phẩm có giá nằm trong khoảng từ 1,000,000 đến 25,000,000. 
+SELECT product_id, product_name, price, stock, category_id 
+FROM Products
+WHERE price > 1000000 AND price < 25000000;
+
+
+-- Lấy ra những sản phẩm mà tên không phải là "iPhone 15" và vẫn còn hàng trong kho (stock > 0). 
+SELECT product_id, product_name, price, stock, category_id 
+FROM Products
+WHERE product_name <> 'iPhone 15' AND stock > 0;
+
+-- Lấy ra các sản phẩm không thuộc danh mục 1 và có giá lớn hơn 500,000. 
+SELECT product_id, product_name, price, stock, category_id 
+FROM Products
+WHERE category_id <> 1 AND price > 500000;
+
+
         
